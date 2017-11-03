@@ -21,7 +21,7 @@ typedef struct album{
 
 
 
-//fonction genrer un pointeur de donnees d'un album
+//fonction permet de creer un pointeur de donnees d'un album
 donnee* creer_donnee(char  titre [20],char  interprete [20],char  label [20],char  date [20],char  style_music [20]){
      donnee* d=(donnee*)malloc(sizeof(donnee));
     strcpy(d->titre,titre);
@@ -45,7 +45,7 @@ album* creerAlbum(int cle,donnee* d){
 	return nouveau;
 }
 
-//fonction recursif pour affecter un album par recherche en profondeur
+//fonction recursive pour affecter un album par un recherche en profondeur
 album* rec_rech(album *nouveau ,album *racine,album *temp){
  if(racine==NULL) return nouveau;
  if(nouveau->cle==temp->cle)	printf("Album existe deja !");
